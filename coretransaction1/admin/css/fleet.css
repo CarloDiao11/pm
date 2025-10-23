@@ -1,0 +1,294 @@
+/* fleet.css - Fleet Management Page Specific Styles */
+
+/* Page Header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Header Buttons Container */
+.header-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+/* Fleet Management Buttons */
+.btn-fleet {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-fleet:hover {
+    background: #333;
+    transform: translateY(-1px);
+}
+
+.btn-fleet i {
+    font-size: 16px;
+}
+
+.btn-schedule {
+    background: #666;
+}
+
+.btn-schedule:hover {
+    background: #555;
+}
+
+.btn-add:hover {
+    background: #222;
+}
+
+/* Table Container */
+.fleet-table-container {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
+.fleet-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.fleet-table thead {
+    background: #f1f3f4;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.fleet-table th {
+    padding: 16px 12px;
+    text-align: left;
+    font-weight: 700;
+    color: #000;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.fleet-table td {
+    padding: 14px 12px;
+    color: #495057;
+    border-bottom: 1px solid #f1f3f4;
+    vertical-align: middle;
+}
+
+/* Striped Rows */
+.fleet-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.fleet-table tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+/* Hover Highlight */
+.fleet-table tbody tr {
+    transition: all 0.2s ease;
+}
+
+.fleet-table tbody tr:hover {
+    background-color: #e9ecef !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fleet-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Vehicle ID Styling */
+.vehicle-id {
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    color: #000;
+    background: #e9ecef;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    display: block;
+    word-break: break-all;
+    line-height: 1.2;
+}
+
+/* Plate Number Styling */
+.plate-number {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: #333;
+    background: #f8f9fa;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    font-size: 13px;
+}
+
+/* Mileage and Insurance Styling */
+.mileage {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: #495057;
+    font-size: 13px;
+}
+
+.insurance-expiry {
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    background: #e8f5e8;
+    color: #2d5a2d;
+}
+
+.insurance-expiry.near-expiry {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.insurance-expiry.expired {
+    background: #f8d7da;
+    color: #721c24;
+}
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    letter-spacing: 0.5px;
+}
+
+.status-active {
+    background: #000;
+    color: #fff;
+    border-color: #333;
+}
+
+.status-maintenance {
+    background: #666;
+    color: #fff;
+    border-color: #555;
+}
+
+.status-inactive {
+    background: #f8f9fa;
+    color: #6c757d;
+    border-color: #dee2e6;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.btn-action {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #dee2e6;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+}
+
+.btn-action:hover {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.btn-action i {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+    
+    .header-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .btn-fleet {
+        flex: 1;
+        justify-content: center;
+        min-width: 140px;
+    }
+    
+    .fleet-table-container {
+        overflow-x: auto;
+    }
+    
+    .fleet-table {
+        min-width: 1000px;
+    }
+    
+    .fleet-table th,
+    .fleet-table td {
+        padding: 12px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-fleet {
+        width: 100%;
+        min-width: unset;
+    }
+    
+    .fleet-table th,
+    .fleet-table td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+    
+    .fleet-table th {
+        font-size: 12px;
+    }
+    
+    .btn-action {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .btn-action i {
+        font-size: 12px;
+    }
+    
+    .vehicle-id,
+    .plate-number {
+        font-size: 11px;
+        padding: 4px 6px;
+    }
+}

@@ -1,0 +1,412 @@
+/* drivers-documents.css - Driver Documents Page Styles */
+
+/* Page Header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.page-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Add Document Button */
+.btn-add-document {
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-add-document:hover {
+    background: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-add-document i {
+    font-size: 1rem;
+}
+
+/* Documents Grid */
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 24px;
+}
+
+/* Driver Card */
+.driver-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #ecf0f1;
+    transition: all 0.3s ease;
+}
+
+.driver-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+/* Driver Header */
+.driver-header {
+    padding: 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #ecf0f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.driver-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.driver-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+.driver-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.driver-name {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.driver-id {
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: #7f8c8d;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Document Summary */
+.document-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.doc-count {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+/* Compliance Status Badges */
+.compliance-status {
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.compliance-status.compliant {
+    background: #2ecc71;
+    color: white;
+}
+
+.compliance-status.warning {
+    background: #f39c12;
+    color: white;
+}
+
+.compliance-status.expired {
+    background: #e74c3c;
+    color: white;
+}
+
+/* Documents List */
+.documents-list {
+    padding: 0;
+}
+
+/* Document Item */
+.document-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #f8f9fa;
+    transition: all 0.2s ease;
+}
+
+.document-item:last-child {
+    border-bottom: none;
+}
+
+.document-item:hover {
+    background: #f8f9fa;
+}
+
+.doc-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.doc-icon {
+    font-size: 1.5rem;
+    color: #e74c3c;
+    flex-shrink: 0;
+}
+
+.bi-file-earmark-image.doc-icon {
+    color: #3498db;
+}
+
+.doc-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.doc-name {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.doc-expiry {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+
+.doc-expiry.expiring {
+    color: #f39c12;
+    font-weight: 600;
+}
+
+.doc-expiry.expired {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+/* Document Actions */
+.doc-actions {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.btn-doc-action {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #dee2e6;
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7f8c8d;
+}
+
+.btn-doc-action:hover {
+    background: #2c3e50;
+    border-color: #2c3e50;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.btn-doc-action i {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .documents-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+    
+    .page-title {
+        font-size: 1.5rem;
+    }
+    
+    .btn-add-document {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .documents-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .driver-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .document-summary {
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .driver-card {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.3rem;
+    }
+    
+    .btn-add-document {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+    }
+    
+    .driver-header {
+        padding: 15px;
+    }
+    
+    .driver-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+    
+    .driver-name {
+        font-size: 0.9rem;
+    }
+    
+    .driver-id {
+        font-size: 0.7rem;
+    }
+    
+    .document-item {
+        padding: 12px 15px;
+    }
+    
+    .doc-icon {
+        font-size: 1.3rem;
+    }
+    
+    .doc-name {
+        font-size: 0.85rem;
+    }
+    
+    .doc-expiry {
+        font-size: 0.75rem;
+    }
+    
+    .btn-doc-action {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .btn-doc-action i {
+        font-size: 0.8rem;
+    }
+    
+    .compliance-status {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+}
+
+/* Empty State */
+.driver-card.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    min-height: 200px;
+}
+
+.driver-card.empty i {
+    font-size: 3rem;
+    color: #bdc3c7;
+    margin-bottom: 15px;
+}
+
+.driver-card.empty p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Print Styles */
+@media print {
+    .page-header .btn-add-document,
+    .doc-actions {
+        display: none;
+    }
+    
+    .driver-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+        margin-bottom: 20px;
+    }
+    
+    .documents-grid {
+        display: block;
+    }
+}

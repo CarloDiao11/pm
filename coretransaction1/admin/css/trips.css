@@ -1,0 +1,253 @@
+/* trips.css - Trips Page Specific Styles */
+
+/* Page Header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Create Trip Button */
+.btn-create-trip {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-create-trip:hover {
+    background: #333;
+    transform: translateY(-1px);
+}
+
+.btn-create-trip i {
+    font-size: 16px;
+}
+
+/* Table Container */
+.trips-table-container {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
+.trips-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.trips-table thead {
+    background: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.trips-table th {
+    padding: 14px 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #495057;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.trips-table td {
+    padding: 14px 12px;
+    color: #495057;
+    border-bottom: 1px solid #f1f3f4;
+    vertical-align: middle;
+}
+
+/* Table Row Hover Effect */
+.trips-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.trips-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.trips-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Trip ID Styling */
+.trip-id {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: #000;
+    background: #f1f3f4;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    display: block;
+    word-break: break-all;
+    line-height: 1.2;
+}
+
+/* Trip Type Styling */
+.trip-type {
+    background: #e9ecef;
+    color: #495057;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.driver-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.driver-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* Status Badges */
+.status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 1px solid transparent;
+}
+
+.status-active {
+    background: #e8f5e8;
+    color: #2d5a2d;
+    border-color: #c3e6c3;
+}
+
+.status-completed {
+    background: #e9ecef;
+    color: #495057;
+    border-color: #dee2e6;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+    border-color: #ffeaa7;
+}
+
+.status-cancelled {
+    background: #f8d7da;
+    color: #721c24;
+    border-color: #f1aeb5;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.btn-action {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #dee2e6;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+}
+
+.btn-action:hover {
+    background: #f8f9fa;
+    border-color: #000;
+    color: #000;
+}
+
+.btn-view:hover {
+    background: #f8f9fa;
+}
+
+.btn-edit:hover {
+    background: #f8f9fa;
+}
+
+.btn-action i {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+    
+    .btn-create-trip {
+        justify-content: center;
+    }
+    
+    .trips-table-container {
+        overflow-x: auto;
+    }
+    
+    .trips-table {
+        min-width: 1100px;
+    }
+    
+    .trips-table th,
+    .trips-table td {
+        padding: 12px 8px;
+    }
+    
+    .driver-info {
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .trips-table th,
+    .trips-table td {
+        padding: 10px 6px;
+        font-size: 13px;
+    }
+    
+    .driver-avatar {
+        width: 28px;
+        height: 28px;
+        font-size: 10px;
+    }
+    
+    .btn-action {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .btn-action i {
+        font-size: 12px;
+    }
+}

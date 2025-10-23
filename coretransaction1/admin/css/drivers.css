@@ -1,0 +1,319 @@
+/* drivers.css - Drivers Management Page Specific Styles */
+
+/* Page Header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Add Driver Button */
+.btn-add-driver {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-add-driver:hover {
+    background: #333;
+    transform: translateY(-1px);
+}
+
+.btn-add-driver i {
+    font-size: 16px;
+}
+
+/* Drivers Card Container */
+.drivers-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    border: 1px solid #f1f3f4;
+    transition: box-shadow 0.3s ease;
+}
+
+.drivers-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
+.drivers-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.drivers-table thead {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.drivers-table th {
+    padding: 18px 16px;
+    text-align: left;
+    font-weight: 600;
+    color: #495057;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.drivers-table td {
+    padding: 16px;
+    color: #495057;
+    border-bottom: 1px solid #f8f9fa;
+    vertical-align: middle;
+}
+
+/* Row Hover Highlight */
+.drivers-table tbody tr {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.drivers-table tbody tr:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.drivers-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Driver ID Styling */
+.driver-id {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: #000;
+    background: #f1f3f4;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    display: block;
+    word-break: break-all;
+    line-height: 1.2;
+}
+
+/* Driver Info */
+.driver-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.driver-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.driver-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.driver-name {
+    font-weight: 600;
+    color: #000;
+    font-size: 14px;
+}
+
+.driver-location {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+/* License Number Styling */
+.license-number {
+    font-family: 'Courier New', monospace;
+    font-weight: 500;
+    color: #495057;
+    background: #f8f9fa;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #e9ecef;
+    font-size: 12px;
+}
+
+/* Compliance Status Badges */
+.compliance-status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid transparent;
+}
+
+.compliance-status.compliant {
+    background: #000;
+    color: #fff;
+    border-color: #333;
+}
+
+.compliance-status.non-compliant {
+    background: #f8f9fa;
+    color: #6c757d;
+    border-color: #dee2e6;
+}
+
+.compliance-status.pending {
+    background: #666;
+    color: #fff;
+    border-color: #555;
+}
+
+/* Rating Styles */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+    color: #ffc107;
+}
+
+.stars i {
+    font-size: 14px;
+}
+
+.stars .bi-star {
+    color: #dee2e6;
+}
+
+.rating-value {
+    font-weight: 600;
+    color: #495057;
+    font-size: 13px;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.btn-action {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #dee2e6;
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+}
+
+.btn-action:hover {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.btn-action i {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+    
+    .btn-add-driver {
+        justify-content: center;
+    }
+    
+    .drivers-card {
+        overflow-x: auto;
+        border-radius: 8px;
+    }
+    
+    .drivers-table {
+        min-width: 1200px;
+    }
+    
+    .drivers-table th,
+    .drivers-table td {
+        padding: 12px 10px;
+    }
+    
+    .driver-info {
+        min-width: 150px;
+    }
+    
+    .driver-avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .drivers-table th,
+    .drivers-table td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+    
+    .drivers-table th {
+        font-size: 11px;
+    }
+    
+    .driver-avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 11px;
+    }
+    
+    .btn-action {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .btn-action i {
+        font-size: 12px;
+    }
+    
+    .driver-id,
+    .license-number {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+    
+    .stars i {
+        font-size: 12px;
+    }
+}
